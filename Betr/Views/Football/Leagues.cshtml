@@ -1,0 +1,36 @@
+﻿@*@model IEnumerable<League>*@
+
+@section Scripts{
+    <script src="~/clientapp/dist/runtime.js"></script>
+    <script src="~/clientapp/dist/polyfills.js"></script>
+    <script src="~/clientapp/dist/styles.js"></script>
+    <script src="~/clientapp/dist/vendor.js"></script>
+    <script src="~/clientapp/dist/main.js"></script>
+}
+
+@{
+    ViewData["Title"] = "Football";
+}
+
+<h2 class="text-center">Football</h2>
+
+<Bettor-App></Bettor-App>
+
+
+@*<div class="container">
+        <div class="list-group">
+            <a class="list-group-item list-group-item-action">Leagues</a>
+            <div >
+                @foreach (var m in Model)
+                {
+                    @*////<a   class="list-group-item list-group-item-action">@m.Name</a>////
+                    <div class="list-group-item list-group-item-action">
+                        @Html.ActionLink(m.Name, "Matches", new { sid = m.Id })
+                    </div>
+                }
+                </div>
+            </div>
+    </div>
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }*@

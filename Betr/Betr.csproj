@@ -1,0 +1,68 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <UserSecretsId>aspnet-Betr-A6A5C0AF-A0E7-43A7-8B51-CAA364F6408B</UserSecretsId>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <TypeScriptToolsVersion>3.1</TypeScriptToolsVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Betr-app\**" />
+    <Compile Remove="bettor-app\**" />
+    <Content Remove="Betr-app\**" />
+    <Content Remove="bettor-app\**" />
+    <EmbeddedResource Remove="Betr-app\**" />
+    <EmbeddedResource Remove="bettor-app\**" />
+    <None Remove="Betr-app\**" />
+    <None Remove="bettor-app\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="ClientApp\app\Leagues\cart.component.css" />
+    <None Remove="ClientApp\app\Leagues\Leagues.component.ts" />
+    <None Remove="ClientApp\app\Matches\cart.component.ts" />
+    <None Remove="ClientApp\app\Matches\Matches.component.ts" />
+    <None Remove="ClientApp\app\Shared\dataService.ts" />
+    <None Remove="ClientApp\app\Shared\leagueService.ts" />
+    <None Remove="ClientApp\app\Shared\order.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Home\Index.cshtml" />
+    <None Include="Views\Home\Privacy.cshtml" />
+    <None Include="Views\Shared\Error.cshtml" />
+    <None Include="Views\Shared\_CookieConsentPartial.cshtml" />
+    <None Include="Views\Shared\_Layout.cshtml" />
+    <None Include="Views\Shared\_LoginPartial.cshtml" />
+    <None Include="Views\Shared\_ValidationScriptsPartial.cshtml" />
+  </ItemGroup>
+<!-- 
+  <PropertyGroup><TargetFramework>netcoreapp2.0</TargetFramework><TypeScriptCompileBlocked>true</TypeScriptCompileBlocked><TypeScriptToolsVersion>Latest</TypeScriptToolsVersion></PropertyGroup> -->
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="6.1.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="3.0.1" />
+    <PackageReference Include="Bogus" Version="28.0.2" />
+    <PackageReference Include="HtmlAgilityPack" Version="1.11.4" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
+    <PackageReference Include="OdeToCode.UseNodeModules" Version="1.0.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+    <Folder Include="wwwroot\clientapp\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\app\Matches\cart.component.css" />
+    <TypeScriptCompile Include="ClientApp\app\Leagues\Leagues.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\Matches\cart.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\Matches\Matches.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\Shared\order.ts" />
+    <TypeScriptCompile Include="ClientApp\app\Shared\leagueService.ts" />
+    <TypeScriptCompile Include="ClientApp\app\Shared\dataService.ts" />
+  </ItemGroup>
+
+</Project>

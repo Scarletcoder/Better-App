@@ -1,0 +1,26 @@
+﻿<div >
+
+    <p>To add a bet to the Bet-Slip, click on the odds that you would like to add. 
+    To increment your bet. Click on the preffered odd again.</p>
+
+    <table class="table table-bordered table-striped table-sm">
+        <thead class="thead-dark">
+            <tr class="text-center">
+                <th>Match No.</th>
+                <th>Teams</th>
+                <th>Winner 1</th>
+                <th>Draw</th>
+                <th>Winner 2</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let m of matches">
+            <tr class="text-center">
+                <td>{{m.matchNoOfTheDay}}</td>
+                <td>{{m.team1Name}} v {{m.team2Name}}</td>
+                <td><button id="betButton1" class="btn" (click)="addBet(m, 1)">{{m.team1Wins}}</button></td>
+                <td><button id="betButton3" class="btn" (click)="addBet(m, 3)">{{m.draw}}</button></td>
+                <td><button id="betButton2" class="btn" (click)="addBet(m, 2)">{{m.team2Wins}}</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,11 @@
+﻿<div>
+    <h4>{{title}}</h4>
+    <div class="list-group">
+        <div *ngFor="let l of leagues">
+            <div class="list-group-item list-group-item-action">
+                 <a href="#/Matches/{{l.id}}">{{l.name}}</a>
+            </div>
+        </div>
+    </div>
+</div>
+

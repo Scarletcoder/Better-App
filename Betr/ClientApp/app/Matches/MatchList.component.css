@@ -1,0 +1,11 @@
+﻿.table {
+    width: 100%;
+    min-width:100%;
+    
+}
+
+.btn {
+    background-color: transparent;
+    border: 0;
+    color: cornflowerblue;
+}

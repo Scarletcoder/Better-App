@@ -1,0 +1,13 @@
+﻿<h3>Bet Slip</h3>
+<div class="container">Subtotal: {{ data.order.subtotal | currency:"USD":true  }}</div>
+<table class="table table-condensed table-hover">
+    
+    <tbody *ngFor="let o of data.order.items">
+        <tr>
+            <td><strong>{{ o.teamName }}</strong></td>
+            <td><strong>{{ o.chance | currency:"USD":true}}</strong></td>
+        </tr>
+        <tr class="matchTeams"><td >{{ o.matchTeams }}</td><td>{{ o.stake }}</td></tr>
+        <tr><td>{{ (o.chance * o.stake) | currency:"USD":true }}</td></tr>
+    </tbody>
+</table>
